@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="meme-gen.css">
+    </head>
+    <body>
+        
+        <h1>Meme Generator</h1>
+        <blockquote >
+            This <b style="font-weight: bold;font-size: 60px;">Meme Generator</b> 
+            is used to add text to any selected image. <br><br>
+            <b style="font-weight:bold; font-size:50px">How does it work:</b> <br>
+            You choose a file by clicking on <em>Choose file</em> button,
+            which takes you to a folder you can select any image from. <br>
+            To add text to the image, you use the 
+            <em>Top Text</em> and <em>Bottom Text</em> text editors. <br>
+            To increase the size of your text using the sliders labelled <em>Text size</em>. <br>
+            To draw on your image, you use the <em>Draw</em> button. <br>
+            To remove the lines added to your image, you use the <em>Erase </em> button.
+        </blockquote>
+        <div class="container">
+            <div style="padding: 30px;">
+                <canvas name= "canvas" id="canvas" ></canvas>
+            </div>
+            <div class="meme-txt">
+                <div style="padding-left: 20px;">
+                    <p class="paragraph">
+                        <p class="txt"> Top Text: </p> <br>
+                        <textarea name="firstText" id='top-txt' cols="80" rows="3" 
+                       placeholder= "Enter text here " ></textarea>
+                       <p class="paragraph">
+                        Text size:<input type="range" id="top-txt-size" style="width: 500px; height: 30px;"
+                        min="0.05" max="0.25" step="0.01">
+                        </p>
+                    </p><br><br>
+                
+                    <p >
+                        <p class="txt"> Bottom Text:</p>  <br>
+                        <textarea name="secondText" id='bottom-txt' cols="80" rows="3"
+                        placeholder= "Enter text here "></textarea>
+                        <p class="paragraph">
+                            Text size:<input type="range" id="bottom-txt-size" style="width: 500px; height: 30px;"
+                            min="0.05" max="0.25" step="0.01">
+                        </p>
+                        
+                    </p><br><br>
+    
+                   
+                    <input type="file" id= "file-slctr"  accept="images/*" style="font-size: 30px;"> <br><br>
+                    <button name ="genMeme" id="meme-gen" class="file" >Generate Meme</button><br><br>
+                   
+                    <div class= button>
+                        Select a color: <br>&#160;&#160;&#160;&#160;&#160;&#160;
+                        <input type="color" id="color-picker" ><br><br>
+                        &#9998; Click to draw on image: <br>&#160;&#160;&#160;&#160;&#160;&#160;
+                        <button name="drawBtn" id= "draw-btn" class="file">Draw</button><br><br>
+                        &#9003; Click to erase: <br>&#160;&#160;&#160;&#160;&#160;&#160;
+                        <button name="eraseBtn" id= "erase-btn" class="file">Erase</button><br><br>
+        
+                    </div>
+                </div>
+                
+                
+    
+            </div>
+            
+        </div>
+        <footer style="font-size: 100px;">
+            Done by Ibeh Esther.
+        </footer>
+        
+       <script src="meme-gen.js"></script>
+        <noscript>This file is not supported by your browser</noscript>
+    </body>
+
+
+</html>
